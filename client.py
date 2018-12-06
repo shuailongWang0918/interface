@@ -126,3 +126,18 @@ class Client(unittest.TestCase):
         else:
             first = None
         self.assertEqual(first, exp, '检查失败.实际结果:{first}预期结果:{exp}'.format(first=first, exp=exp))
+
+    def res_expression(self, data, LB, RB):
+        """通过正则表达式实现关联"""
+        if self.res:
+            rule = LB + r"(.*?)" + RB
+            association = re.findall(rule, data)
+            return association
+        else:
+            return None
+
+    def check_res_text(self, data, value):
+        """判断返回数据中是否包含预期结果"""
+        if self.res:
+            results = value in data
+            self.assertEqual(results, True, '返回数据中未存在"%s"' % value)
