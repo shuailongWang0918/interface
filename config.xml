@@ -4,16 +4,15 @@
 
 
     <cases>
-        <!--<add-addEvent01/>-->
         <dome04-register01/>
     </cases>
 
     <db>
-        <host>139.199.132.220</host>
-        <port>3306</port>
-        <user>root</user>
-        <password>123456</password>
-        <name>event</name>
+        <host>0</host>
+        <port>0</port>
+        <user>0</user>
+        <password>0</password>
+        <name>0</name>
 
 
     </db>
